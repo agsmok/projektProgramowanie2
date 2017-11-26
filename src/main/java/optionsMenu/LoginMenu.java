@@ -2,14 +2,39 @@ package optionsMenu;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class LoginMenu implements MenuInterface {
-    private List<User> users;
+    private List<User> users = new ArrayList<>();
 
 
     public void display() {
+        addToList(u1, u2, u3, u4);
+
+        System.out.println("Witaj w naszym systemie.");
+        System.out.print("Podaj login:");
+        Scanner scanner = new Scanner(System.in);
+
+        String login = scanner.nextLine().trim();
+
+        System.out.print("Podaj hasło:");
+        String password = scanner.nextLine().trim();
+        verify(login, password);
 
 
+    }
+
+    private void verify(String login, String password) {
+        for (User user : users) {
+            if (login.equals(user.getLogin()) && password.equals(user.getPassword())) {
+                System.out.println("Zalogowałeś się!");
+                break;
+            } else
+
+                System.out.println("Błąd logowania");
+            break;
+
+        }
     }
 
 
@@ -18,20 +43,14 @@ public class LoginMenu implements MenuInterface {
     User u3 = new User("cccc", "c");
     User u4 = new User("dddd", "d");
 
-    public void addToList(User u1, User u2, User u3, User u4) {
+    public void addToList(User... userss) {
+        for (User user : userss) {
+            users.add(user);
 
-            users.add(u1);
-            users.add(u2);
-            users.add(u3);
-            users.add(u4);
-
-
-    }
-
-    public void showList() {
-        for (User user :
-                users) {
-            System.out.println(user.getLogin() + user.getPassword());
         }
+
+
     }
+
+
 }
