@@ -1,8 +1,12 @@
-public class User {
+package optionsMenu;
+
+import java.util.List;
+
+public class Users {
     private String login;
     private String password;
 
-    public User(String login, String password) {
+    public Users(String login, String password) {
         this.login = login;
         this.password = password;
     }
@@ -28,4 +32,6 @@ public class User {
             return fullLogin;
         }
     }
+
+
 }
