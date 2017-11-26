@@ -27,7 +27,7 @@ public class Menu {
     }
 
 
-    public void display(MenuOptions menuOptions) {
+    public void showMenu(MenuOptions menuOptions) {
         allOptions.get(menuOptions).display();
 
     }
