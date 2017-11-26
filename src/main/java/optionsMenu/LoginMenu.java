@@ -7,11 +7,15 @@ import java.util.List;
 import java.util.Scanner;
 
 public class LoginMenu implements MenuInterface {
+    public LoginMenu() {
+        addToList(u1, u2, u3, u4);
+    }
+
     private List<User> users = new ArrayList<>();
 
 
     public void display() {
-        addToList(u1, u2, u3, u4);
+
 
         System.out.println("Witaj w naszym systemie.");
         System.out.print("Podaj login:");
@@ -27,14 +31,14 @@ public class LoginMenu implements MenuInterface {
     }
 
     private void verify(String login, String password) {
+        boolean zalogowano = false;
         for (User user : users) {
             if (login.equals(user.getLogin()) && password.equals(user.getPassword())) {
+                zalogowano=true;
                 System.out.println("Zalogowałeś się!");
-                break;
-            } else
+            } if (!zalogowano)
+            System.out.println("Błąd logowania");
 
-                System.out.println("Błąd logowania");
-            break;
         }
     }
 
