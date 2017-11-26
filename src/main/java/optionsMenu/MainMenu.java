@@ -1,6 +1,6 @@
 package optionsMenu;
 
-public class MainMenu implements Menu {
+public class MainMenu implements MenuInterface {
     public void display() {
 
     }
