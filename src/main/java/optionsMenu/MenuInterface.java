@@ -1,5 +1,5 @@
 package optionsMenu;
 
-public interface Menu {
+public interface MenuInterface {
     public void display();
 }
