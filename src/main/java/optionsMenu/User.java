@@ -1,12 +1,10 @@
 package optionsMenu;
 
-import java.util.List;
-
-public class Users {
+public class User {
     private String login;
     private String password;
 
-    public Users(String login, String password) {
+    public User(String login, String password) {
         this.login = login;
         this.password = password;
     }
@@ -18,7 +16,6 @@ public class Users {
     public String getPassword() {
         return password;
     }
-
     public enum Role{
         USER ("USER"), ADMIN ("ADMIN");
 
@@ -32,6 +29,4 @@ public class Users {
             return fullLogin;
         }
     }
-
-
 }
