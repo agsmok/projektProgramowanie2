@@ -1,4 +1,6 @@
+import optionsMenu.CurrencyMenu;
 import optionsMenu.LoginMenu;
+import optionsMenu.MainMenu;
 import optionsMenu.MenuInterface;
 
 import java.util.HashMap;
@@ -24,6 +26,8 @@ public class Menu {
 
     private Menu() {
         allOptions.put(MenuOptions.LOGIN_MENU, new LoginMenu());
+        allOptions.put(MenuOptions.MAIN_MENU, new MainMenu());
+        allOptions.put(MenuOptions.CURRENCY_MENU, new CurrencyMenu());
     }
 
 
