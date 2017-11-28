@@ -23,7 +23,7 @@ public class User {
 
         Role(String e) {
             fullLogin = e;
-        }
+        } //zla nazwa np full login
 
         public String getFullLogin() {
             return fullLogin;
