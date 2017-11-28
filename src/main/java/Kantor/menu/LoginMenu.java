@@ -4,6 +4,14 @@ package Kantor.menu;
 import Kantor.User;
 
 import java.util.*;
+//zmienne
+//konstruktor
+//metody
+
+
+//klasa inicjalizujace dane login i hasla
+
+
 
 import static Kantor.User.Role.ADMIN;
 import static Kantor.User.Role.USER;
@@ -11,15 +19,18 @@ import static Kantor.User.Role.USER;
 
 public class LoginMenu implements MenuInterface {
 
-//    public LoginMenu() {
-//      CO TO?
-//    }
 
     private List<User> users = new ArrayList<>();
 
 
+
+    public void display() { //wyswietl np displaylogin menu
+//        addToList(u1, u2, u3, u4); //powinno nie dodawac do listy ale wyswietlac liste
+    }
+
     public void displayLoginMenu() {
 //        addToList(u1, u2, u3, u4);
+
 
         System.out.println("Witaj w naszym systemie.");
         System.out.print("Podaj login:");
@@ -44,6 +55,7 @@ public class LoginMenu implements MenuInterface {
             if (login.equals(user.getLogin()) && password.equals(user.getPassword())) {
                 zalogowano = true;
                 System.out.println("Zalogowałeś się!");
+                break;
             }
         }
         if (!zalogowano)
@@ -56,7 +68,9 @@ public class LoginMenu implements MenuInterface {
 //    User u3 = new User("cccc", "c");
 //    User u4 = new User("dddd", "d");
 
-    public void addToList(User... userss) {
+
+
+    public void addToList(User... userss) {  //
         for (User user : userss) {
             users.add(user);
 
@@ -66,8 +80,5 @@ public class LoginMenu implements MenuInterface {
     }
 
 
-    @Override
-    public void display() {
 
-    }
 }

@@ -23,7 +23,8 @@ public class User {
         return role;
     }
 
-    public enum Role{
-        USER, ADMIN;
+
+    public enum Role {
+        USER, ADMIN
     }
 }
