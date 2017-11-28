@@ -1,17 +1,25 @@
-package optionsMenu;
+package Kantor.menu;
+
+
+import Kantor.User;
 
 import java.util.*;
 
-public class LoginMenu implements MenuInterface {
-    public LoginMenu() {
+import static Kantor.User.Role.ADMIN;
+import static Kantor.User.Role.USER;
 
-    }
+
+public class LoginMenu implements MenuInterface {
+
+//    public LoginMenu() {
+//      CO TO?
+//    }
 
     private List<User> users = new ArrayList<>();
 
 
-    public void display() {
-        addToList(u1, u2, u3, u4);
+    public void displayLoginMenu() {
+//        addToList(u1, u2, u3, u4);
 
         System.out.println("Witaj w naszym systemie.");
         System.out.print("Podaj login:");
@@ -27,6 +35,10 @@ public class LoginMenu implements MenuInterface {
     }
 
     private void verify(String login, String password) {
+       List<User>users = new ArrayList<>();
+       users.add(new User("admin","admin",ADMIN));
+       users.add(new User("user","user",USER));
+
         boolean zalogowano = false;
         for (User user : users) {
             if (login.equals(user.getLogin()) && password.equals(user.getPassword())) {
@@ -39,10 +51,10 @@ public class LoginMenu implements MenuInterface {
     }
 
 
-    User u1 = new User("aaaa", "a");
-    User u2 = new User("aaaa", "b");
-    User u3 = new User("cccc", "c");
-    User u4 = new User("dddd", "d");
+//    User u1 = new User("aaaa", "a");
+//    User u2 = new User("aaaa", "b");
+//    User u3 = new User("cccc", "c");
+//    User u4 = new User("dddd", "d");
 
     public void addToList(User... userss) {
         for (User user : userss) {
@@ -54,4 +66,8 @@ public class LoginMenu implements MenuInterface {
     }
 
 
+    @Override
+    public void display() {
+
+    }
 }

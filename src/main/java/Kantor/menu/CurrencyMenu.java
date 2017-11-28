@@ -1,4 +1,4 @@
-package optionsMenu;
+package Kantor.menu;
 
 public class CurrencyMenu implements MenuInterface {
     public void display() {

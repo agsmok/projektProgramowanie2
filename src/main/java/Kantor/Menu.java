@@ -1,10 +1,14 @@
-import optionsMenu.CurrencyMenu;
-import optionsMenu.LoginMenu;
-import optionsMenu.MainMenu;
-import optionsMenu.MenuInterface;
+package Kantor;
+
+import Kantor.menu.CurrencyMenu;
+import Kantor.menu.LoginMenu;
+import Kantor.menu.MainMenu;
+import Kantor.menu.MenuInterface;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static java.awt.SystemColor.menu;
 
 public class Menu {
 
