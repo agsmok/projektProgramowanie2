@@ -1,4 +1,6 @@
-package optionsMenu;
+package Kantor.menu;
+
+
 
 public class MainMenu implements MenuInterface {
 
